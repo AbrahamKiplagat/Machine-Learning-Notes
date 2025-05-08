@@ -36,19 +36,20 @@ Bagging (Bootstrap Aggregation) is a Machine Learning Ensemble algorithm, essent
 Formally, bagging follows this approach, where multiple bootstrap samples are drawn from the training dataset, and a decision tree model is fitted to each of them. The predictions from the decision trees are then combined, typically resulting in a combined model with higher accuracy and robustness.
 
 Decision trees are employed because they tend to exhibit “overfitting” to the data on which they are trained, characterized by models with high variance. In theory, each tree adapts to the dataset it is given, allowing each tree to capture specific nuances based on the data’s characteristics. The effectiveness of the bagging method relies on the assumption that the trees have low correlation among their predictions, thereby resulting in reduced errors in the combined prediction. The bagging technique is particularly suitable for models with high variance.
-
+![alt text](image-5.png)
 ## 2. Building Decision Trees
-The construction of a decision tree involves selecting the best attributes for division at each node. The impurity of a node can be measured using the Gini criterion (for classification) or mean squared error (for regression).
+- The construction of a decision tree involves selecting the best attributes for division at each node. The impurity of a node can be measured using the Gini criterion (for classification) or mean squared error (for regression).
 
-Gini Impurity: metric to decide the optimal split from a root node, and subsequent splits. It is the most popular and the easiest way to split a decision tree and it works only with categorical targets as it only does binary splits. Lower the Gini Impurity, higher is the homogeneity of the node. The Gini Impurity of a pure node(same class) is zero.
+- Gini Impurity: metric to decide the optimal split from a root node, and subsequent splits. It is the most popular and the easiest way to split a decision tree and it works only with categorical targets as it only does binary splits. Lower the Gini Impurity, higher is the homogeneity of the node. The Gini Impurity of a pure node(same class) is zero.
 
 where pi​ represents the fraction of instances belonging to class i within the node, and c denotes the total number of classes.
 
 Erro Quadrático Médio (MSE):
-
+![alt text](image-4.png)
 ## 3. Independent Decision Tree Predictions
 Each tree independently makes predictions for the input data. For classification problems, this could be a class label, and for regression problems, it could be a numerical value.
 
-
+![alt text](image-3.png)
 # 4. Combining Predictions
 The final prediction of the Random Forest is then determined based on combining the outputs of all individual trees. For classification, it could involve a majority vote, and for regression, it might be an average of the predictions.
+![alt text](image-2.png)
