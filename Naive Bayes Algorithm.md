@@ -121,8 +121,6 @@ Use TF-IDF for better text vectorization
 
 ## 🔍 Tuning & Evaluation
 ```python
-Copy
-Edit
 from sklearn.model_selection import cross_val_score
 scores = cross_val_score(GaussianNB(), X, y, cv=5)
 print("Cross-validated Accuracy:", np.mean(scores))
